@@ -4,22 +4,33 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Designing for Self-Perception of Aging in Low-Resource Settings: Leveraging Reflection, AI, and Cultural Contexts in HCI — India HCI 2025 Workshop</title>
-  <meta name="description" content="Half-day, hands-on India HCI 2025 workshop exploring how Self-Perception of Aging (SPA), culture and spirituality, and AI accessibility can inform well-being design in HCI." />
+  <meta name="description" content="Hands-on India HCI 2025 workshop exploring how Self-Perception of Aging (SPA), culture & spirituality, and equitable AI can inform well-being design in HCI." />
+
+  <!-- Social share -->
+  <meta property="og:title" content="India HCI 2025 Workshop — SPA × IKS × HCI">
+  <meta property="og:description" content="7 Nov 2025 · 15:00–18:00 IST · Limited to 20 participants">
+  <meta property="og:image" content="banner.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
     :root{
       --bg:#ffffff; --card:#ffffff; --ink:#0f172a; --muted:#475569; --accent:#0b5fff; --accent2:#7c3aed; --line:#e5e7eb;
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;background:var(--bg);color:#0f172a}
-    a{color:#0b5fff}
+    html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--ink)}
+    a{color:var(--accent)}
     .wrap{max-width:1100px;margin:0 auto;padding:24px}
     header{display:grid;grid-template-columns:1fr;gap:16px;padding:28px 0 8px}
     .badge{display:inline-block;padding:6px 10px;border:1px solid var(--line);border-radius:999px;background:#fafafa;color:#334155;font-size:12px;letter-spacing:.4px}
     h1{margin:4px 0 0;font-size: clamp(26px,3.2vw,40px);line-height:1.2}
-    .sub{color:#475569;font-size:clamp(14px,1.6vw,18px)}
+    .sub{color:var(--muted);font-size:clamp(14px,1.6vw,18px)}
+    .hero{margin:12px 0 16px}
+    .hero picture, .hero img{display:block;width:100%}
+    .hero img{height:clamp(200px,36vw,360px);object-fit:cover;border-radius:12px}
     .grid{display:grid;gap:20px}
     @media(min-width:900px){ .grid{grid-template-columns:1.1fr .9fr} }
     .card{background:#ffffff;border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:0 6px 16px rgba(2,6,23,.06)}
@@ -28,19 +39,19 @@
     .kicker{font-size:13px;color:#334155;text-transform:uppercase;letter-spacing:.14em;margin-bottom:6px}
     ul{margin:8px 0 0 20px}
     li{margin:6px 0}
-    .pill{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:#f1f5f9;border:1px solid var(--line);color:#0f172a;font-size:13px}
+    .pill{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:#f1f5f9;border:1px solid var(--line);color:var(--ink);font-size:13px}
     .row{display:flex;gap:10px;flex-wrap:wrap}
     .cta{display:flex;flex-direction:column;gap:12px}
-    .btn{appearance:none;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 16px;border-radius:12px;border:1px solid var(--line);background:#0b5fff;color:white;text-decoration:none;font-weight:600}
+    .btn{appearance:none;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 16px;border-radius:12px;border:1px solid var(--line);background:var(--accent);color:white;text-decoration:none;font-weight:600}
     .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;}
-    .muted{color:#475569}
+    .muted{color:var(--muted)}
     .divider{height:1px;background:var(--line);margin:20px 0}
     .chips{display:flex;gap:8px;flex-wrap:wrap}
-    .chip{padding:6px 10px;border-radius:999px;background:#f8fafc;border:1px solid var(--line);color:#0f172a;font-size:12px}
+    .chip{padding:6px 10px;border-radius:999px;background:#f8fafc;border:1px solid var(--line);color:var(--ink);font-size:12px}
     .schedule{width:100%;border-collapse:collapse;font-size:14px}
     .schedule td{border-top:1px solid var(--line);padding:10px 8px;vertical-align:top}
-    footer{margin:44px 0 24px;color:#475569;font-size:13px}
-    .note{font-size:12px;color:#475569}
+    footer{margin:44px 0 24px;color:var(--muted);font-size:13px}
+    .note{font-size:12px;color:var(--muted)}
     .form-container{background:#fafafa;border:1px solid var(--line);border-radius:12px;overflow:hidden;height:1520px;margin-top:8px}
     .form-container iframe{display:block;width:100%;height:1600px;border:0}
   </style>
@@ -48,10 +59,18 @@
 <body>
   <div class="wrap">
     <header>
-      <span class="badge">India HCI 2025 · Half-day Workshop · Asia/Kolkata (IST)</span>
+      <span class="badge">India HCI 2025 · 7 Nov 2025 · Asia/Kolkata (IST)</span>
       <h1>Designing for Self-Perception of Aging in Low-Resource Settings: Leveraging Reflection, AI, and Cultural Contexts in HCI</h1>
-      <p class="sub">A hands-on session using Self-Perception of Aging (SPA) as an entry point to co-design Indian Knowledge System(IKS) inspired well-being toolkits across digital, tangible, and hybrid media.</p>
+      <p class="sub">A hands-on session using Self-Perception of Aging (SPA) as an entry point to co-design Indian Knowledge System (IKS) inspired well-being toolkits across digital, tangible, and hybrid media.</p>
     </header>
+
+    <!-- Hero / Banner -->
+    <div class="hero" aria-label="Workshop banner image">
+      <picture>
+        <source srcset="banner.webp" type="image/webp">
+        <img src="banner.jpg" alt="Close-up of elderly hands resting on a wooden cane">
+      </picture>
+    </div>
 
     <div class="grid">
       <!-- About -->
@@ -62,8 +81,8 @@
           How can SPA, culture and spirituality, and equitable AI be translated into interactive tools for well-being? Building on research with older adults in India and a working SPA reflection app, we will experience Indian Knowledge System (IKS) inspired guidance and materialize it into design concepts and low-fi toolkits.
         </p>
         <div class="row" aria-label="key info">
-          <div class="pill" title="date"><span>🗓️</span> <strong>Date/Time:</strong> To be confirmed by organizers</div>
-          <div class="pill" title="venue"><span>📍</span> India HCI 2025 · Conference venue</div>
+          <div class="pill" title="date"><span>🗓️</span> <strong>Date/Time:</strong> 7 November 2025 · 15:00–18:00 IST</div>
+          <div class="pill" title="venue"><span>📍</span> <strong>Venue:</strong> Room TBA · India HCI 2025</div>
         </div>
         <div class="divider"></div>
         <div>
@@ -79,13 +98,18 @@
         </div>
       </section>
 
-      <!-- Apply CTA -->
+      <!-- Workshop Details / Apply CTA -->
       <section class="card cta">
         <div>
           <div class="kicker">Apply</div>
           <h2>Reserve your spot</h2>
           <p class="muted">We’ll prioritize a mix of perspectives. You’ll receive a confirmation email if you’re in the first 20, or a waitlist note otherwise.</p>
           <p><strong>Limited to 20 participants.</strong></p>
+          <ul class="muted" style="margin-left:18px">
+            <li><strong>Date/Time:</strong> 7 Nov 2025 · 15:00–18:00 IST</li>
+            <li><strong>Venue:</strong> Room TBA</li>
+            <li><strong>Format:</strong> Hands-on, collaborative</li>
+          </ul>
         </div>
         <div>
           <a class="btn" href="#form" rel="noopener">Fill the sign-up form</a>
@@ -93,23 +117,23 @@
       </section>
     </div>
 
-    <!-- Schedule -->
+    <!-- Schedule (3 hours) -->
     <section class="card" id="schedule" style="margin-top:20px">
       <div class="kicker">Flow</div>
-      <h2>Workshop plan (4 hours)</h2>
-      <table class="schedule" role="table">
+      <h2>Workshop plan (3 hours)</h2>
+      <table class="schedule" role="table" aria-label="Workshop schedule">
         <tbody>
-          <tr><td class="mono">00:00–00:20</td><td><strong>Framing:</strong> SPA, culture/spirituality, equitable AI</td></tr>
-          <tr><td class="mono">00:20–00:45</td><td><strong>Experience:</strong> SPA cards + app to receive Indian Knowledge System (IKS) inspired guidance</td></tr>
-          <tr><td class="mono">00:45–01:15</td><td><strong>Pool & sense-making:</strong> Anonymous guidance wall and theme clustering</td></tr>
-          <tr><td class="mono">01:15–02:15</td><td><strong>Co-design:</strong> Turn one guidance into a well-being toolkit concept (digital/tangible/hybrid)</td></tr>
-          <tr><td class="mono">02:15–02:30</td><td><strong>Break</strong></td></tr>
-          <tr><td class="mono">02:30–03:15</td><td><strong>Gallery walk:</strong> Present toolkits and discuss feasibility and equity</td></tr>
-          <tr><td class="mono">03:15–03:45</td><td><strong>Synthesis:</strong> Principles for operationalizing Indian Knowledge System in HCI</td></tr>
-          <tr><td class="mono">03:45–04:00</td><td><strong>Wrap-up:</strong> Next steps and optional post-workshop reflection</td></tr>
+          <tr><td class="mono">15:00–15:10</td><td><strong>Framing:</strong> SPA, culture/spirituality, equitable AI</td></tr>
+          <tr><td class="mono">15:10–15:30</td><td><strong>Experience:</strong> SPA cards + app to receive IKS-inspired guidance</td></tr>
+          <tr><td class="mono">15:30–15:50</td><td><strong>Pool &amp; sense-making:</strong> Guidance wall and quick clustering</td></tr>
+          <tr><td class="mono">15:50–16:35</td><td><strong>Co-design sprint:</strong> Turn one guidance into a well-being toolkit concept (digital/tangible/hybrid)</td></tr>
+          <tr><td class="mono">16:35–16:45</td><td><strong>Short break</strong></td></tr>
+          <tr><td class="mono">16:45–17:25</td><td><strong>Gallery walk &amp; feedback</strong></td></tr>
+          <tr><td class="mono">17:25–17:50</td><td><strong>Synthesis:</strong> Principles for operationalizing IKS in HCI</td></tr>
+          <tr><td class="mono">17:50–18:00</td><td><strong>Wrap-up:</strong> Next steps and optional post-workshop reflection</td></tr>
         </tbody>
       </table>
-      <p class="note">Times shown as a relative 4-hour block. Exact start time will reflect the conference slot once confirmed.</p>
+      <p class="note">Scheduled for <strong>7 Nov 2025, 15:00–18:00 IST (3 hours)</strong>. Room details will be announced by India HCI organizers.</p>
     </section>
 
     <!-- Organizers -->
@@ -148,7 +172,10 @@
       <h2>Apply to join</h2>
       <p class="muted">Please complete the Google Form below to express interest.</p>
       <div class="form-container">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScJ2WHp64KnqafjoLVtNr-r8CJQ9J_NStoKr3aWRyE--dJHkA/viewform?embedded=true">Loading…</iframe>
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLScJ2WHp64KnqafjoLVtNr-r8CJQ9J_NStoKr3aWRyE--dJHkA/viewform?embedded=true"
+          loading="lazy"
+          title="Workshop sign-up form">Loading…</iframe>
       </div>
     </section>
 
